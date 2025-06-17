@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // "baseUrl": ".",
+    // Игнорировать ошибки в библиотеках +  "@types/node": "^17.0.45", для игнора ошибок при сборке 
+    "skipLibCheck": true,  
+    // позволяет использовать import вместо common js require
+    "esModuleInterop": true,
+    // если в пакете нет export default, создает
+    "allowSyntheticDefaultImports": true,
+  },
+   "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
