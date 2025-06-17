@@ -7,7 +7,10 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    // "baseUrl": ".",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // Игнорировать ошибки в библиотеках +  "@types/node": "^17.0.45", для игнора ошибок при сборке 
     "skipLibCheck": true,  
     // позволяет использовать import вместо common js require
