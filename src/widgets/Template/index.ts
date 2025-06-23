@@ -1,1 +1,1 @@
-export { Template } from "./ui/Template"
+export { Template } from './ui/Template';
