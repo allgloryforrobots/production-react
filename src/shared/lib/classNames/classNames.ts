@@ -4,10 +4,11 @@ export function classNames(cls: string, mods: Mods = {}, additional: string[] = 
     return [
         cls,
         ...additional.filter(Boolean),
-        Object.entries(mods)
+        ...Object.entries(mods)
             .filter(([_, value]) => Boolean(value))
             .map(([className]) => className),
-    ].join(' ').trim();
+    ]
+        .join(' ').trim();
 }
 
 // classNames('remove-btn', {hovered: true, selectable: true, red: false}, ['pdg'])
