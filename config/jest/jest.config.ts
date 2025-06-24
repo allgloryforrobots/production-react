@@ -21,47 +21,30 @@ export default {
     // cacheDirectory: "C:\\Users\\tim\\AppData\\Local\\Temp\\jest",
 
     // Automatically clear mock calls, instances and results before every test
-
+    preset: 'ts-jest',
+    transform: {
+        '^.+\\.(ts|tsx)$': 'ts-jest',
+    },
     clearMocks: true,
-
     testEnvironment: 'jsdom',
-
     coveragePathIgnorePatterns: [
-
         '\\\\node_modules\\\\',
-
     ],
-
     moduleFileExtensions: [
-
         'js',
-
         'jsx',
-
         'ts',
-
         'tsx',
-
         'json',
-
         'node',
-
     ],
-
     moduleDirectories: [
-
         'node_modules',
-
     ],
-
     testMatch: [
-
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
-
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-
     ],
-
     rootDir: '../../',
 
     // Indicates whether the coverage information should be collected while executing the test
