@@ -1,7 +1,7 @@
 import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Sidebar } from 'widgets/Sidebar';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
