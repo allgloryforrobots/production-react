@@ -18,9 +18,12 @@
     // если в пакете нет export default, создает
     "allowSyntheticDefaultImports": true,
   },
-   "ts-node": {
+  "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTests.ts"
+  ],
 }
