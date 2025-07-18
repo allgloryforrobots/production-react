@@ -21,3 +21,16 @@ export const Primary: Story = {
         children: 'Text',
     },
 };
+
+export const Clear: Story = {
+    args: {
+        children: 'Text',
+    },
+};
+
+export const Outline: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.OUTLINE,
+    },
+};
