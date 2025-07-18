@@ -4,7 +4,7 @@ import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator
 import { Theme } from '../../src/app/providers/ThemeProvider';
 
 const preview: Preview = {
-  decorators: [StyleDecorator, ThemeDecorator(Theme.DARK)],
+  decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT)],
   parameters: {
     controls: {
       matchers: {
