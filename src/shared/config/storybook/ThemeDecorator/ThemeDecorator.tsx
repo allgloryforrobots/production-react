@@ -1,9 +1,8 @@
-import type { Decorator } from '@storybook/react';
+import { Story } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 
-// @ts-ignore
-export const ThemeDecorator = (theme: Theme) => (Story) => (
-  <div className={`app ${theme}`}>
-    <Story />
-  </div>
+export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) => (
+    <div className={`app ${theme}`}>
+        <StoryComponent />
+    </div>
 );
