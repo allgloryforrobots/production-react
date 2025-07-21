@@ -13,6 +13,8 @@
     },
     // Игнорировать ошибки в библиотеках +  "@types/node": "^17.0.45", для игнора ошибок при сборке 
     "skipLibCheck": true,  
+    // игнорируем ошибку с babel-traverse на ci cd пока не перейдем на новый React
+    "noEmitOnError": true,
     // позволяет использовать import вместо common js require
     "esModuleInterop": true,
     // если в пакете нет export default, создает
