@@ -23,7 +23,12 @@ jobs:
       - name: Remove problematic @types/babel__traverse
         run: rm -rf node_modules/@types/babel__traverse
       - name: build production project
+        timeout-minutes: 2
         run: npm run build:prod
+      - name: Check build status
+        run: echo "Exit code: $?
+      - name: List files after build
+        run: ls -la
       - name: linting typescript
         run: npm run lint:ts
       - name: linting css
