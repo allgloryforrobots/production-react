@@ -14,6 +14,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
     config?.resolve?.extensions?.push('.ts', '.tsx');
 
     // @ts-ignore
+    // eslint-disable-next-line no-param-reassign
     config.module.rules = config?.module?.rules?.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {
             return { ...rule, exclude: /\.svg$/i };
@@ -26,7 +27,6 @@ export default ({ config }: {config: webpack.Configuration}) => {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
     });
-    
     config?.module?.rules?.push(buildCssLoader(true));
 
     return config;
