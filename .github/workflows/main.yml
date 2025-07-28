@@ -4,9 +4,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
 jobs:
-  pipeline: 
+  pipeline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -14,27 +13,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Starting Node.js ${{ matrix.node-version }}
+      - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install
-      - name: Remove problematic @types/babel__traverse
-        run: rm -rf node_modules/@types/babel__traverse
-      - name: build production
-        run: |
-          npm run build:prod
-          echo "Статус-код: $?"
-      - name: List files after build
-        run: ls -la
+      - name: build production project
+        run: npm run build:prod
+        if: always()
       - name: linting typescript
         run: npm run lint:ts
+        if: always()
       - name: linting css
         run: npm run lint:scss
       - name: unit testing
-        run: npm run unit
+        if: always()
+        run: npm run test:unit
       - name: build storybook
         run: npm run storybook:build
+        if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
+        if: always()
