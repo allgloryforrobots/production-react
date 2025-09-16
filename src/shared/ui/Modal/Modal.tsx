@@ -5,7 +5,6 @@ import {
     useEffect,
     useCallback,
 } from 'react';
-import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
 import { Portal } from '../Portal/Portal';
 
